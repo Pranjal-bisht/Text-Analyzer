@@ -5,7 +5,7 @@ import { TextForm } from './components/TextForm';
 const App = () => {
   return (
     <>
-      <Navbar title="Textutils" Aboutus="About" />
+      <Navbar title="Text Analyzer" Aboutus="About" />
       <div className="container my-3">
         <TextForm heading="Enter text" />
       </div>
