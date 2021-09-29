@@ -19,10 +19,6 @@ const Navbar = (props) => {
                                 <a className="nav-link active" aria-current="page" href="/">{props.Aboutus}</a>
                             </li>
                         </ul>
-                        <form className="d-flex">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-primary" type="submit">Search</button>
-                        </form>
                     </div>
                 </div>
             </nav>

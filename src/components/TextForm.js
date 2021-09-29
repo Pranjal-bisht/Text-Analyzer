@@ -12,6 +12,20 @@ export const TextForm = (props) => {
     const onTextChanged = (event) => {
         setText(event.target.value);
     }
+    const oncpChanged = () => {
+        let Text = document.getElementById("myBox");
+        Text.select();
+        navigator.clipboard.writeText(Text.value);
+    }
+    const onclrChanged = () => {
+        let cleartext = '';
+        setText(cleartext);
+    }
+    
+    const onrmChanged = () => {
+        let newtext = Text.split(/[ ]+/);
+        setText(newtext.join(" "));
+    }
     const [Text, setText] = useState('');
 
     return (
@@ -22,6 +36,9 @@ export const TextForm = (props) => {
             </div>
             <button className="btn btn-primary mx-1" onClick={onUpChanged}>Convert to upper case</button>
             <button className="btn btn-primary mx-1" onClick={onloChanged}>Convert to lower case</button>
+            <button className="btn btn-primary mx-1" onClick={oncpChanged}>Copy text</button>
+            <button className="btn btn-primary mx-1" onClick={onclrChanged}>Clear text</button>
+            <button className="btn btn-primary mx-1" onClick={onrmChanged}>Remove extra spaces</button>
             <div className="container my-3">
                 <h1> Your Text Summary </h1>
                 <p> 
