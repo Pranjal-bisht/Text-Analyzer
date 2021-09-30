@@ -29,18 +29,18 @@ export const TextForm = (props) => {
     const [Text, setText] = useState('');
 
     return (
-        <div>
+        <div className="container" style={{color: props.mode === 'dark' ? 'white' : 'black'}}>
             <h1> {props.heading} </h1>
             <div className="mb-3">
-                <textarea className="form-control" value={Text} onChange={onTextChanged} id="myBox" rows="8"></textarea>
+                <textarea className="form-control" value={Text} onChange={onTextChanged} style={{background: props.mode === 'dark' ? 'grey' : 'white', color: props.mode === 'dark' ? 'white' : 'black'}} id="myBox" rows="8"></textarea>
             </div>
             <button className="btn btn-primary mx-1" onClick={onUpChanged}>Convert to upper case</button>
             <button className="btn btn-primary mx-1" onClick={onloChanged}>Convert to lower case</button>
             <button className="btn btn-primary mx-1" onClick={oncpChanged}>Copy text</button>
             <button className="btn btn-primary mx-1" onClick={onclrChanged}>Clear text</button>
             <button className="btn btn-primary mx-1" onClick={onrmChanged}>Remove extra spaces</button>
-            <div className="container my-3">
-                <h1> Your Text Summary </h1>
+            <div className="container my-3" style={{color: props.mode === 'dark' ? 'white' : 'black'}}>
+                <h1 > Your Text Summary </h1>
                 <p> 
                     {Text.split(" ").length} words and {Text.length} characters
                 </p>
