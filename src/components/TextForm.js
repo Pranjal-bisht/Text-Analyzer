@@ -4,10 +4,12 @@ export const TextForm = (props) => {
     const onUpChanged = () => {
         let newText = Text.toUpperCase();
         setText(newText);
+        props.showAlert("Changed to Upper case.","success");
     }
     const onloChanged = () => {
         let newText = Text.toLowerCase();
         setText(newText);
+        props.showAlert("Changed to Lower case.","success");
     }
     const onTextChanged = (event) => {
         setText(event.target.value);
@@ -16,15 +18,18 @@ export const TextForm = (props) => {
         let Text = document.getElementById("myBox");
         Text.select();
         navigator.clipboard.writeText(Text.value);
+        props.showAlert("Text Copied.","success");
     }
     const onclrChanged = () => {
         let cleartext = '';
         setText(cleartext);
+        props.showAlert("Cleared text.","success");
     }
     
     const onrmChanged = () => {
         let newtext = Text.split(/[ ]+/);
         setText(newtext.join(" "));
+        props.showAlert("Removed spaces.","success");
     }
     const [Text, setText] = useState('');
 
