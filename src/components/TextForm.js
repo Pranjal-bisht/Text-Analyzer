@@ -18,12 +18,12 @@ export const TextForm = (props) => {
         let Text = document.getElementById("myBox");
         Text.select();
         navigator.clipboard.writeText(Text.value);
-        props.showAlert("Text Copied.","success");
+        props.showAlert("Copied to clipboard.","success");
     }
     const onclrChanged = () => {
         let cleartext = '';
         setText(cleartext);
-        props.showAlert("Cleared text.","success");
+        props.showAlert("Text Cleared .","success");
     }
     
     const onrmChanged = () => {
