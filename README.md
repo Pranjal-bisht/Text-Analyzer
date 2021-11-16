@@ -1,7 +1,7 @@
 ## Text-Analyzer Web Application:
 
 ## Check : [LIVE](mytextanalyser.herokuapp.com/)
-• Build a React App to manipulate your text. It offers different functions to manipulate your text like lower to upper case or vice versa, removing extra spaces. 
+• Build a React App to manipulate your text. It offers different functions to manipulate your text like lower to upper case or vice versa, removing extra spaces. <br/>
 • Build light/dark mode facility which is built using the concept of useState hooks in ReactJS and deployed the App on Herokuapp.
 
 
